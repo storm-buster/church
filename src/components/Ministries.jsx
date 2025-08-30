@@ -1,8 +1,13 @@
 "use client"
 
-import { useState } from "react"
-import { FaChild, FaMusic, FaHandsHelping, FaGraduationCap, FaPrayingHands, } from "react-icons/fa"
-import { FaHandHoldingHand , FaHandsHoldingChild} from "react-icons/fa6";
+import {
+  FaChild,
+  FaMusic,
+  FaHandsHelping,
+  FaGraduationCap,
+  FaPrayingHands,
+} from "react-icons/fa"
+import { FaHandHoldingHand, FaHandsHoldingChild } from "react-icons/fa6";
 import { GiOpenBook } from "react-icons/gi";
 import { IoAccessibilityOutline } from "react-icons/io5";
 import { HiOutlineUserGroup } from "react-icons/hi2";
@@ -15,7 +20,7 @@ const ministryData = [
     description:
       "Nurturing the faith of our youngest members through age-appropriate Bible lessons, activities, and worship.",
     icon: <FaHandsHoldingChild />,
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
   {
     id: 2,
@@ -23,14 +28,14 @@ const ministryData = [
     description:
       "Leading the congregation in heartfelt worship through music, song, and creative expressions of praise.",
     icon: <FaPrayingHands />,
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
   {
     id: 3,
     title: "Bible Study",
     description: "Deepening our understanding of Scripture through in-depth study, discussion, and application.",
     icon: <GiOpenBook />,
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
 
   {
@@ -38,22 +43,22 @@ const ministryData = [
     title: "Youth",
     description: "Deepening our understanding of Scripture through in-depth study, discussion, and application.",
     icon: <HiOutlineUserGroup/>,
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
   {
     id: 5,
     title: "Amazing Grace Theological Institute (AGTI)",
     description: "Deepening our understanding of Scripture through in-depth study, discussion, and application.",
     icon: <FaGraduationCap />,
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
-  
+
   {
     id: 6,
     title: "Stewardship And Life Transformation (SALT)",
     description: "Building meaningful relationships and spiritual growth through regular small group gatherings.",
     icon: <FaHandHoldingHand />,
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
 ]
 
@@ -90,9 +95,11 @@ const Ministries = ({ fullPage = false, simple = false }) => {
                     <img src={ministry.image || "/placeholder.svg"} alt={ministry.title} />
                   </div>
                   <p>{ministry.description}</p>
-                  <a href={`/ministries#${ministry.id}`} className="ministry-link">
-                    Learn More
-                  </a>
+                  {ministry.id === 6 && (
+                    <a href="#" className="ministry-link">
+                      Learn More
+                    </a>
+                  )}
                 </div>
               )}
             </div>
@@ -104,4 +111,3 @@ const Ministries = ({ fullPage = false, simple = false }) => {
 }
 
 export default Ministries
-

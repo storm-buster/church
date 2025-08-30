@@ -29,26 +29,25 @@ function App() {
     <Router>
       <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <About />
-              <Ministries />
-              <Events />
-              <Testimonials />
-              <Contact />
-            </>
-          }
-        />
-        <Route path="/ministries" element={<Ministries />} />
-        <Route path="/media" element={<Media />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/donate" element={<Donate />} />
-      </Routes>
+     <Routes>
+  <Route
+    path="/"
+    element={
+      <>
+        <Hero />
+        <Ministries />
+        <Events />
+        <Testimonials />
+      </>
+    }
+  />
+  <Route path="/about" element={<About />} />
+  <Route path="/ministries" element={<Ministries fullPage />} />
+  <Route path="/media" element={<Media fullPage />} />
+  <Route path="/team" element={<Team />} />
+  <Route path="/contact" element={<Contact fullPage />} />
+  <Route path="/donate" element={<Donate />} />
+</Routes>
       <Footer />
     </Router> 
   );

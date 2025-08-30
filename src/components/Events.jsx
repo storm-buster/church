@@ -37,7 +37,7 @@ const eventData = [
     date: "Every Friday",
     time: "6:00 PM - 8:00 PM",
     description: "Dive deeper into Scripture with our interactive Bible study sessions.",
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const eventData = [
     date: "Every Friday",
     time: "9:30 PM - 11:00 PM",
     description: "A fun and engaging evening for teenagers to grow in faith and friendship.",
-    image: "\Anime Landscape.png",
+    image: "/Anime Landscape.png",
   },
  
 ]

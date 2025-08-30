@@ -17,7 +17,7 @@ import "./Contact.css"
 const Contact = ({ fullPage = false }) => {
   useEffect(() => {
     // Initialize EmailJS with your public key
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY)
+    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
   }, [])
 
   const [formData, setFormData] = useState({
@@ -55,10 +55,10 @@ const Contact = ({ fullPage = false }) => {
       console.log('Sending email with params:', templateParams)
 
       const response = await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+         import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+
       )
 
       console.log('EmailJS Response:', response)
